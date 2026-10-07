@@ -181,7 +181,7 @@ Kepler asks you for no password and no key: it reuses the login of `gh`, GitHub'
 One command downloads the latest `Kepler.app`, verifies its checksum, installs it in `/Applications` (or `~/Applications`) and opens it:
 
 ```bash
-curl -fsSL https://github.com/ludovicweber87/Kepler-app/releases/latest/download/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/ludovicweber87/Kepler-app/main/install.sh | sh
 ```
 
 > Kepler is not signed with an Apple Developer ID. Installed this way it opens normally; a `.dmg` downloaded from a browser is blocked by Gatekeeper on first launch (System Settings → Privacy & Security → **Open Anyway**).
@@ -238,7 +238,7 @@ For a dev checkout, `bash scripts/install-dev.sh` clones a copy into `~/.kepler/
 
 `npm run build:app` builds `Kepler.app` locally (`packages/desktop/dist/`: `.app`, `.dmg`, `.zip`, `latest-mac.yml`). It needs no Apple account: the app is ad-hoc signed.
 
-To publish a version, push a tag: `git tag v1.2.0 && git push origin v1.2.0`. The `release` workflow builds the app on a macOS runner and publishes it, with `install.sh`, to the public [Kepler-app](https://github.com/ludovicweber87/Kepler-app/releases) repo — the one the installer and the in-app updater read from.
+To publish a version, push a tag: `git tag v1.2.0 && git push origin v1.2.0`. The `release` workflow builds the app on a macOS runner and publishes it to the public [Kepler-app](https://github.com/ludovicweber87/Kepler-app/releases) repo — the one the installer and the in-app updater read from.
 
 <br/>
 
@@ -465,7 +465,7 @@ Kepler ne vous demande ni mot de passe ni clé : il réutilise la connexion de `
 Une commande télécharge la dernière `Kepler.app`, vérifie son empreinte, l'installe dans `/Applications` (ou `~/Applications`) et l'ouvre :
 
 ```bash
-curl -fsSL https://github.com/ludovicweber87/Kepler-app/releases/latest/download/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/ludovicweber87/Kepler-app/main/install.sh | sh
 ```
 
 > Kepler n'est pas signé avec un Developer ID Apple. Installé ainsi, il s'ouvre normalement ; un `.dmg` téléchargé depuis un navigateur est bloqué par Gatekeeper au premier lancement (Réglages Système → Confidentialité et sécurité → **Ouvrir quand même**).
@@ -522,7 +522,7 @@ Pour un checkout de dev, `bash scripts/install-dev.sh` clone une copie dans `~/.
 
 `npm run build:app` construit `Kepler.app` en local (`packages/desktop/dist/` : `.app`, `.dmg`, `.zip`, `latest-mac.yml`). Aucun compte Apple n'est nécessaire : l'app est signée ad hoc.
 
-Pour publier une version, poussez un tag : `git tag v1.2.0 && git push origin v1.2.0`. Le workflow `release` construit l'app sur un runner macOS et la publie, avec `install.sh`, sur le repo public [Kepler-app](https://github.com/ludovicweber87/Kepler-app/releases) — celui que lisent l'installeur et la mise à jour intégrée.
+Pour publier une version, poussez un tag : `git tag v1.2.0 && git push origin v1.2.0`. Le workflow `release` construit l'app sur un runner macOS et la publie sur le repo public [Kepler-app](https://github.com/ludovicweber87/Kepler-app/releases) — celui que lisent l'installeur et la mise à jour intégrée.
 
 <br/>
 
